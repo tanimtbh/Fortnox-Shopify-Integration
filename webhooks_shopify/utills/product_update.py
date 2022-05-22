@@ -18,7 +18,7 @@ def refresh_new_token():
 
     data = {'grant_type': 'refresh_token', 'refresh_token': refresh_token}
     print("refreshing for new access token...")
-    access_token_response = requests.post("https://apps.fortnox.se/oauth-v1/token", data=data, verify=False, allow_redirects=False, auth=("QyzzQyjFwre7fSI", "BJlwwerw5IuY1p"))
+    access_token_response = requests.post("https://apps.fortnox.se/oauth-v1/token", data=data, verify=False, allow_redirects=False, auth=("fSI", "Brw5I1p"))
 
     # we can now use the access_token as much as we want to access protected resources.
     tokens = json.loads(access_token_response.text)
@@ -109,7 +109,7 @@ def get_one_from_fortnox(article_num, shopify_id):
     
 def update_product_shopify(id_shopify_product, payload):
     try:
-        r = requests.put(url="https://3fb221feeert3671abc41097ertwer52137d85f0b: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@nawrasdev.myshopify.com/admin/api/2022-01/products/{}.json".format(id_shopify_product), data=json.dumps(payload),
+        r = requests.put(url="https://3fb221feeert22569c19b439dev.myshopify.com/admin/api/2022-01/products/{}.json".format(id_shopify_product), data=json.dumps(payload),
                          headers = {
                                 "Content-Type":"application/json",
                                 "Accept":"application/json",
