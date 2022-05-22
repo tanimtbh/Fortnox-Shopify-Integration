@@ -109,7 +109,7 @@ def get_one_from_fortnox(article_num, shopify_id):
     
 def update_product_shopify(id_shopify_product, payload):
     try:
-        r = requests.put(url="https://3fb221feeert22569c19b439dev.myshopify.com/admin/api/2022-01/products/{}.json".format(id_shopify_product), data=json.dumps(payload),
+        r = requests.put(url="https://tgyjtytyjtyjtyjtyjfgrt1439dev.myshopify.com/admin/api/2022-01/products/{}.json".format(id_shopify_product), data=json.dumps(payload),
                          headers = {
                                 "Content-Type":"application/json",
                                 "Accept":"application/json",
